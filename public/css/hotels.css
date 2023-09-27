@@ -1,0 +1,66 @@
+.header{
+    background-color:#92E382;
+    width: 100%;
+    font-size:20px;
+    text-align: center;
+    padding:40px 30px;
+    float: left;
+}
+
+.header-logo{
+    float:left;
+    font-size:30px;
+    font-family: Comic;
+    font-weight: bold;
+}
+
+li{
+    color: white;
+    list-style:none;
+    float:left;
+    font-size:25px;
+    padding:15px 30px;
+}
+
+.reservations{
+    background-color:#EE3AAC;
+    padding:15px 5px;
+    border:2px solid #000;
+    margin-right: 10px;
+}
+
+.reservation-check{
+    background-color:#3936D3;
+    padding:15px 5px;
+    border:2px solid #000;
+    margin-left: 10px;
+}
+
+a{
+    color:white;
+    text-decoration: none;
+
+}
+
+.conteiner{
+    padding:180px 0 100px 0;
+    background-image:url('/background/picture1.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color:white;
+    text-align: center;
+    font-size:24px;
+}
+
+img{
+    border:2px solid #555;
+    padding:5px;
+    max-width: 80%;
+}
+
+.main{
+    text-align:center;
+    background-color: #DFB682;
+    width: 100%;
+}
