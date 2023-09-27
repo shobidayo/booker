@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name',30);
-            $table->string('address',255);
-            $table->string('email',255)->unique();
-            $table->string('tell_number',30);
-            $table->string('password');
-            $table->string('email_verified_at',255)->nullable();
-            $table->rememberToken();
+        Schema::create('reservation_room', function (Blueprint $table) {
+            $table->foreignId('reservation_id')->constrained();
+            $table->foreignId('room_id')->constrained();
             $table->timestamps();
             $table->softDeletes();
         });
@@ -34,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('reservation_room');
     }
 };
