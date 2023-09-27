@@ -13,17 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('hotels', function (Blueprint $table) {
-             $table->id();
-             $table->string('name',30);
-             $table->string('description',255);
-             $table->string('room_type',255);
-             $table->string('event',255);
-             $table->string('information',255);
-             $table->string('FAQ',255);
+        Schema::create('reservation_plan', function (Blueprint $table) {
+             $table->foreignId('reservation_id')->constrained();
+             $table->foreignId('plan_id')->constrained();
              $table->timestamps();
              $table->softDeletes();
-                    });
+        });
     }
 
     /**
@@ -33,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hotels');
+        Schema::dropIfExists('reservation_plan');
     }
 };
