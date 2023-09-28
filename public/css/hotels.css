@@ -27,6 +27,7 @@ li{
     padding:15px 5px;
     border:2px solid #000;
     margin-right: 10px;
+    display: inline-block;
 }
 
 .reservation-check{
@@ -34,6 +35,7 @@ li{
     padding:15px 5px;
     border:2px solid #000;
     margin-left: 10px;
+    display: inline-block;
 }
 
 a{
