@@ -7,7 +7,7 @@
 
         <!-- Fonts -->
     
-        <link href="{{ asset('css/reservations.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/reservations.css') }}" rel="stylesheet">
     </head>
     <body>    
     <div class = "header">
@@ -42,7 +42,7 @@
 
         <input type="submit" value="検索する">
     </form>
-    <script src="{{ asset('JavaScript/reservations.js') }}"></script>
+    <script src="{{ secure_asset('JavaScript/reservations.js') }}"></script>
     </div>
      
     <a href ="/">戻る</a>
