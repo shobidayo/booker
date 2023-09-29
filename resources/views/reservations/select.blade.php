@@ -30,6 +30,7 @@
                 <option value="ダブルルーム">ダブルルーム(最大2名利用)</option>
             </select>
     </div>        
+    <a href = "/plans">いったん次のページに遷移させるために配置</a>
  
     <div class = "date">
         
