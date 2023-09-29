@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\ReservationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,9 +17,8 @@ use App\Http\Controllers\HotelController;
 Route::get('/',[HotelController::class,'index']);
 //'/'がリクエストされたときにviewフォルダのhotelsフォルダindex.blade.phpが開くようにしている
 
-Route::get('/reservations',function(){
-   return view('reservations/select'); 
-});
+Route::get('/reservations',[ReservationController::class, 'select']); 
+Route::get('/plans',[ReservationController::class,'choices']);
 //Route::get('/reservations',[ReservationController::class,'index']);
 //'/reservationsが押されたら、'次のページに遷移
 // Route::get('/reservation_check',[ReservationController::class,'check']);
