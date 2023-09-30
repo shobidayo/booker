@@ -33,7 +33,7 @@
  
     <div class = "date">
         
-    <form action="次のページに遷移するようにphpを入れる" method="post">
+    <form action="/posts" method="post">
         <label for="checkin">チェックイン日</label>
         <input type="date" id="checkin" name="checkin_date" onchange="updateCheckoutDate()"><br>
 
