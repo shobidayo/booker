@@ -16,9 +16,10 @@
       </div>
     
 <div class="main">
+    @foreach ($choices as $choice)
     <table border="0"> <!-- border="0" でテーブルの枠線を削除 -->
         <tr>
-            <td class="heading">プラン名:<!--DBのname--></td>
+            <td class="heading">プラン名:{{ $choice->name }}</td>
         </tr>
         <tr>
             <td>
@@ -30,7 +31,7 @@
         </tr>
         <tr>
             <td class="plan-description">
-                ここにDBから持ってきたプランのbodyを入力。<!-- DBのbody-->
+                {{ $choice->body }}
             </td>
         </tr>
         <!-- 料金テーブル -->
@@ -38,26 +39,31 @@
             <td>
                 <table border="2" class="price-table"> <!-- border="2" で料金テーブルの枠線を太く -->
                     <tr>
-                        <td class="price_heading" colspan="3">料金:<!-- DBのprice--></td>
+                        <td class="price_heading" colspan="3">料金:</td>
                     </tr>
                     <tr>
-                        <td class="room-name">シングルルーム<!-- DBから持ってくる？--></td>
-                        <td class="room-price">10000en<!-- DBから持ってくる--></td>
+                        <td class="room-name">シングルルーム</td>
+                        <td class="room-price">¥{{ $choice->price }}</td>
                         <td rowspan="2"><button class="reservation-button">予約するボタンを追加</button></td>
                     </tr>
                     <tr>
-                        <td class="room-name">ツインルーム<!-- DBから持ってくる？--></td>
-                        <td class="room-price">20000en<!-- DBから持ってくる--></td>
+                        <td class="room-name">ツインルーム</td>
+                        <td class="room-price">¥{{ $choice->price1 }}</td>
                     </tr>
                 </table>
             </td>
         </tr>
     </table>
+    @endforeach
 </div>
-
-
-<div class ="paginate">{{ $choices->links() }}</div>
-
-          <a href ="/">戻る</a>
+<div class="paginate">
+    <ul class="pagination">
+        {{ $choices->links() }}
+    </ul>
+    次へ
+</div>
+<div class="footer">
+    <a href="/">戻る</a>
+</div>
     </body>
 </html>
