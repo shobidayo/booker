@@ -17,6 +17,7 @@ table {
     border-collapse: collapse; /* テーブルの線を結合 */
     border: 3px solid black; /* 枠線を太くする */
     margin:0 auto;
+    margin-bottom: 20px;
 }
 
 .heading {
@@ -83,16 +84,40 @@ table {
     border: 2px solid orange; /* オレンジの枠線 */
     border-radius: 5px; /* 角丸 */
 }
+.paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 150px;
+}
 
-a{
-    display: block;
-    text-align: center;
-    padding:10px 15px;
-    margin:0 auto;
-    width:70px;
-    background-color:white;
-    color:black;
+.paginate .pagination li {
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.paginate .pagination li a {
     text-decoration: none;
-    border:2px solid black;
-    border-radius: 5px;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s; /* ホバー時のトランジションを設定 */
+}
+
+a:hover {
+    background-color: black;
+    color: white;
 }

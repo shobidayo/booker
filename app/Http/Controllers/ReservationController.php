@@ -11,9 +11,4 @@ class ReservationController extends Controller
     {
     return view('reservations.select');
     }
-    public function choices(Reservation $reservation)
-    {
-        return view('plans.choose')->with(['choices'=>$reservation->getPaginateBylimit(3)]);
-    }
-    
 }

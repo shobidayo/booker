@@ -20,6 +20,7 @@ class PlansSeeder extends Seeder
             'name' => 'プラン1',
             'body' => 'プラン1の内容',
             'price' => '10000',
+            'price1' => '20000',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
@@ -28,6 +29,7 @@ class PlansSeeder extends Seeder
             'name' => 'プラン2',
             'body' => 'プラン2の内容',
             'price' => '20000',
+            'price1' => '30000',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
@@ -36,6 +38,7 @@ class PlansSeeder extends Seeder
             'name' => 'プラン3',
             'body' => 'プラン3の内容',
             'price' => '30000',
+            'price1' => '40000',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
@@ -44,6 +47,7 @@ class PlansSeeder extends Seeder
             'name' => 'プラン4',
             'body' => 'プラン4の内容',
             'price' => '40000',
+            'price1' => '50000',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
@@ -52,6 +56,7 @@ class PlansSeeder extends Seeder
             'name' => 'プラン5',
             'body' => 'プラン5の内容',
             'price' => '50000',
+            'price1' => '60000',
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
