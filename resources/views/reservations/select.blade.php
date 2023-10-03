@@ -10,6 +10,18 @@
         <link href="{{ secure_asset('css/reservations.css') }}" rel="stylesheet">
     </head>
     <body>    
+    <form action="/plans" method="POST">
+            @csrf
+            <div class="capacity">人数：
+                    <select name="reserver_people">
+                        <option value="未選択">選択してください</option>
+                        <option value="1">1名様</option>
+                        <option value="2">2名様</option>
+                    </select>
+            </div>
+            <input type="submit" value="プラン検索"/>
+        </form>
+    
     <div class = "header">
         <h1>予約検索</h1>
     </div>
@@ -30,10 +42,10 @@
                 <option value="ダブルルーム">ダブルルーム(最大2名利用)</option>
             </select>
     </div>        
+    <a href = "/plans">いったん次のページに遷移させるために配置</a>
  
     <div class = "date">
-        
-    <form action="/posts" method="post">
+    <form action="次のページに遷移するようにphpを入れる" method="post">
         <label for="checkin">チェックイン日</label>
         <input type="date" id="checkin" name="checkin_date" onchange="updateCheckoutDate()"><br>
 
@@ -42,10 +54,9 @@
 
         <input type="submit" value="検索する">
     </form>
-    <script src="{{ secure_asset('JavaScript/reservations.js') }}"></script>
+    <script ="{{ ('JavaScript/reservations.js') }}"></script>
     </div>
-     
-    <a href ="/">戻る</a>
     
+     <a href ="/">戻る</a>
     </body>
 </html>
