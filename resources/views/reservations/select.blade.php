@@ -26,7 +26,7 @@
         <h1>予約検索</h1>
     </div>
 
-    <div class =capacity>     
+    <div class ="capacity">     
          <label for="capacity">人数:</label>
             <select name="people">
                 <option value="未選択">選択してください</option>
@@ -34,7 +34,7 @@
                 <option value="2名">2名様</option>
             </select>
     </div>       
-    <div class =room>     
+    <div class ="room">     
          <label for="room">部屋の選択:</label>
             <select name="room_type">
                 <option value="未選択">選択してください</option>
