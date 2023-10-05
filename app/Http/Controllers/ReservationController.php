@@ -11,4 +11,15 @@ class ReservationController extends Controller
     {
     return view('reservations.select');
     }
+    
+    public function search(Request $request,Reservation $reservation)
+    {
+        $selectedPeople = $request->input('reserver_people');
+        dd($selectedPeople);
+        
+        // $plans =Plan::where('capacity',$selectedPeople)->get();
+        
+    // return view('reservations.select');
+    }
+    
 }
