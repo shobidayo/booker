@@ -11,11 +11,18 @@ class PlanController extends Controller
     {
         $peopleNumber= $request->input('people');
         $selected_plans=$plans->rooms()->where('capacity',$peopleNumber)->get();
+        dd($selected_plans);
+        return redirect('/plans');
+        // if ($selected_plans->isEmpty()){
+        //     return redirect('/reservations')->with('error','該当するプランが見つかりませんでした');
+        // }
+        // $selected_planId=$selected_plans->first()->id;
         //{{ $selected_plans->rooms->capacity }}
     }
     
     public function choices(Plan $plan)
     {
         return view('plans.choose')->with(['choices'=>$plan->getPaginateBylimit(3)]);
+        
     }
 }
