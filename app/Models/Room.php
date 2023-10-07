@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Room extends Model
 {
     use HasFactory;
+    
+    public function plans(){
+    //1つの部屋に多数のプラン。
+    return $this->belongsToMany(Plan::class);
+    }
 }
