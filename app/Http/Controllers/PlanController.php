@@ -10,8 +10,10 @@ class PlanController extends Controller
     public function search(Request $request, Plan $plans)
     {
         $peopleNumber= $request->input('people');
-        $selected_plans=$plans->rooms()->where('capacity',$peopleNumber)->get();
-        dd($selected_plans);
+        $selected_plans = $plans->whereHas('rooms', function($q) use($peopleNumber){
+            $q->where('capacity','=', $peopleNumber);
+        })->get();
+       dd($selected_plans);
         return redirect('/plans');
         // if ($selected_plans->isEmpty()){
         //     return redirect('/reservations')->with('error','該当するプランが見つかりませんでした');
