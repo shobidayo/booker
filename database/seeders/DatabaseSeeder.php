@@ -18,6 +18,11 @@ class DatabaseSeeder extends Seeder
         $this->call(HotelsSeeder::class);
         $this->call(PlansSeeder::class);
         $this->call(RoomsSeeder::class);
+        $this->call(UsersSeeder::class);
+        $this->call(ReservationsSeeder::class);
+        $this->call(PlanRoomSeeder::class);
+        $this->call(ReservationPlanSeeder::class);
+        $this->call(ReservationRoomSeeder::class);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
