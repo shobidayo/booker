@@ -18,61 +18,61 @@ class PlanRoomSeeder extends Seeder
     {
         DB::table('plan_room')->insert([
             'room_id'=>1,
-            'plan_id'=>6,
+            'plan_id'=>1,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
-        DB::table('plan_room')->insert([
-            'room_id'=>2,
-            'plan_id'=>6,
-            'created_at' => new DateTime(),
-            'updated_at' => new DateTime(),
-            ]);    
+        // DB::table('plan_room')->insert([
+        //     'room_id'=>2,
+        //     'plan_id'=>1,
+        //     'created_at' => new DateTime(),
+        //     'updated_at' => new DateTime(),
+        //     ]);    
         DB::table('plan_room')->insert([
             'room_id'=>1,
-            'plan_id'=>7,
+            'plan_id'=>2,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);  
         DB::table('plan_room')->insert([
             'room_id'=>2,
-            'plan_id'=>7,
+            'plan_id'=>2,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
         DB::table('plan_room')->insert([
             'room_id'=>1,
-            'plan_id'=>8,
+            'plan_id'=>3,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
         DB::table('plan_room')->insert([
             'room_id'=>2,
-            'plan_id'=>8,
+            'plan_id'=>3,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
         DB::table('plan_room')->insert([
             'room_id'=>1,
-            'plan_id'=>9,
+            'plan_id'=>4,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
         DB::table('plan_room')->insert([
             'room_id'=>2,
-            'plan_id'=>9,
+            'plan_id'=>4,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);   
-        DB::table('plan_room')->insert([
-            'room_id'=>1,
-            'plan_id'=>10,
-            'created_at' => new DateTime(),
-            'updated_at' => new DateTime(),
-            ]);    
+        // DB::table('plan_room')->insert([
+        //     'room_id'=>1,
+        //     'plan_id'=>5,
+        //     'created_at' => new DateTime(),
+        //     'updated_at' => new DateTime(),
+        //     ]);    
         DB::table('plan_room')->insert([
             'room_id'=>2,
-            'plan_id'=>10,
+            'plan_id'=>5,
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);    
