@@ -22,12 +22,12 @@ class PlanRoomSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);
-        // DB::table('plan_room')->insert([
-        //     'room_id'=>2,
-        //     'plan_id'=>1,
-        //     'created_at' => new DateTime(),
-        //     'updated_at' => new DateTime(),
-        //     ]);    
+        DB::table('plan_room')->insert([
+            'room_id'=>2,
+            'plan_id'=>1,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+            ]);    
         DB::table('plan_room')->insert([
             'room_id'=>1,
             'plan_id'=>2,
@@ -64,12 +64,12 @@ class PlanRoomSeeder extends Seeder
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
             ]);   
-        // DB::table('plan_room')->insert([
-        //     'room_id'=>1,
-        //     'plan_id'=>5,
-        //     'created_at' => new DateTime(),
-        //     'updated_at' => new DateTime(),
-        //     ]);    
+        DB::table('plan_room')->insert([
+            'room_id'=>1,
+            'plan_id'=>5,
+            'created_at' => new DateTime(),
+            'updated_at' => new DateTime(),
+            ]);    
         DB::table('plan_room')->insert([
             'room_id'=>2,
             'plan_id'=>5,
