@@ -18,7 +18,9 @@ class PlanController extends Controller
         $q->where('capacity','>=', $peopleNumber)
           ->where('type','=',$roomSelect)
           ->where('checkin_date','>=',$checkinDate)
-          ->where('checkout_date','<=',$checkoutDate);
+          ->orwhereNull('checkin_date')
+          ->where('checkout_date','<=',$checkoutDate)
+          ->orwhereNull('checkout_date');
         })->get();
         
         dd($selected_plans);
@@ -27,10 +29,8 @@ class PlanController extends Controller
         //{{ $selected_plans->rooms->capacity }}
         
     }
-    
     public function choices(Plan $plan)
     {
         return view('plans.choose')->with(['choices'=>$plan->getPaginateBylimit(3)]);
-        
     }
 }
