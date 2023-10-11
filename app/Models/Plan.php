@@ -13,7 +13,9 @@ class Plan extends Model
     //部屋は多数のプランを取得。
     return $this->belongsToMany(Room::class);
     }
-    
+    public function reservations(){
+    return $this->belongsToMany(Reservation::class);
+    }
     
     public function getPaginateBylimit(int $limit_count=5)
     {

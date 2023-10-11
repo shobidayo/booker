@@ -13,4 +13,7 @@ class Room extends Model
     //1つの部屋に多数のプラン。
     return $this->belongsToMany(Plan::class);
     }
+    public function reservations(){
+    return $this->belongsToMany(Reservation::class);
+    }
 }
