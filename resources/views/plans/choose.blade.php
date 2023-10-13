@@ -24,7 +24,7 @@
         <tr>
             <td>
                 <div class="plan-detail">
-                    プランの内容 
+                    プランの内容
                     <button class="plan-detail-button" id ="showPopup">プランの詳細</button>
                 </div>
             </td>

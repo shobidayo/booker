@@ -23,9 +23,9 @@ class PlanController extends Controller
           ->orwhereNull('checkout_date');
         })->get();
         
-        dd($selected_plans);
+        // dd($selected_plans);
         
-        return redirect('/plans');
+        return redirect('/plans')->with(['selected_plans' => $selected_plans]);
         //{{ $selected_plans->rooms->capacity }}
         
     }
