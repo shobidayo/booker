@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\DB;
 use DateTime;
 
@@ -21,7 +22,7 @@ class UsersSeeder extends Seeder
             'address' => '東京都',
             'email' => 'aaa@email.com',
             'tell_number' => '09012345678',
-            'password' => 'パスワード',
+            'password' => Hash::make('パスワード'),
             'email_verified_at' => now(),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
@@ -31,7 +32,7 @@ class UsersSeeder extends Seeder
             'address' => '北海道',
             'email' => 'iii@email.com',
             'tell_number' => '01234567890',
-            'password' => 'パスワード1',
+            'password' => Hash::make('パスワード1'),
             'email_verified_at' => now(),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
@@ -41,7 +42,7 @@ class UsersSeeder extends Seeder
             'address' => '大阪府',
             'email' => 'uuu@email.com',
             'tell_number' => '08012345678',
-            'password' => 'パスワード2',
+            'password' =>Hash::make('パスワード2'),
             'email_verified_at' => now(),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),
@@ -51,7 +52,7 @@ class UsersSeeder extends Seeder
             'address' => '沖縄',
             'email' => 'eee@email.com',
             'tell_number' => '07012345678',
-            'password' => 'パスワード3',
+            'password' => Hash::make('パスワード3'),
             'email_verified_at' => now(),
             'created_at' => new DateTime(),
             'updated_at' => new DateTime(),

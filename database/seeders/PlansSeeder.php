@@ -18,7 +18,7 @@ class PlansSeeder extends Seeder
     {
         DB::table('plans')->insert([
             'name' => 'プラン1',
-            'body' => 'プラン1の内容',
+            'body' => "プラン1の内容\nこのプラン内容は素泊まりのプランです。\n朝食、夕食はついておりません",
             'price' => '10000',
             'price1' => '20000',
             'created_at' => new DateTime(),
