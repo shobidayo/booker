@@ -29,18 +29,10 @@ table {
 .plan-detail {
     padding:20px;
     font-size:20px;
-    display: flex; /* コンテンツを横並びに配置 */
-    justify-content: space-between; /* プラン内容とボタンを左右に配置 */
-    margin:auto;
-}
-
-.plan-detail-button {
-    display: block;
-    font-size:20px;
-    padding: 10px 5px;
-    background-color: #931024;
-    color:white;
+    color:black;
+    font-weight: bold;
     border-radius: 5px;
+    margin:auto;
 }
 
 .plan-description {

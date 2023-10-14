@@ -16,10 +16,4 @@ class Plan extends Model
     public function reservations(){
     return $this->belongsToMany(Reservation::class);
     }
-    
-    public function getPaginateBylimit(int $limit_count=5)
-    {
-        return $this->orderBy('updated_at','DESC')->paginate($limit_count);
-    }
-    
 }

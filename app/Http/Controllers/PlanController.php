@@ -22,15 +22,14 @@ class PlanController extends Controller
           ->where('checkout_date','<=',$checkoutDate)
           ->orwhereNull('checkout_date');
         })->get();
-        
         // dd($selected_plans);
-        
         return redirect('/plans')->with(['selected_plans' => $selected_plans]);
         //{{ $selected_plans->rooms->capacity }}
         
     }
-    public function choices(Plan $plan)
+    public function choices(Request $request,)
     {
-        return view('plans.choose')->with(['choices'=>$plan->getPaginateBylimit(3)]);
+        $choice = $request->session()->get('selected_plans');
+        return view('plans.choose')->with(['choices'=>$choice]);
     }
 }
