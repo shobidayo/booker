@@ -25,7 +25,6 @@
             <td>
                 <div class="plan-detail">
                     プランの内容
-                    <button class="plan-detail-button" id ="showPopup">プランの詳細</button>
                 </div>
             </td>
         </tr>
@@ -55,12 +54,6 @@
         </tr>
     </table>
     @endforeach
-</div>
-<div class="paginate">
-    <ul class="pagination">
-        {{ $choices->links() }}
-    </ul>
-    次へ
 </div>
 <div class="footer">
     <a href="/">戻る</a>
