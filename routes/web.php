@@ -16,7 +16,7 @@ use App\Http\Controllers\PlanController;
 |
 */
 Route::get('/',[HotelController::class,'index']);
-Route::get('/reservations',[ReservationController::class, 'select']); 
+Route::get('/reservations',[ReservationController::class, 'select']);
 Route::post('/search/plans',[PlanController::class,'search']);
 Route::get('/plans',[PlanController::class,'choices']);
-Route::post('/create/data',[PlanController::class,'create']);
+Route::get('/plans/{plan}/reservation',[PlanController::class,'show']);

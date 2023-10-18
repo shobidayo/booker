@@ -24,12 +24,17 @@ class PlanController extends Controller
         })->get();
         // dd($selected_plans);
         return redirect('/plans')->with(['selected_plans' => $selected_plans]);
-        //{{ $selected_plans->rooms->capacity }}
-        
     }
-    public function choices(Request $request,)
+    public function choices(Request $request)
     {
         $choice = $request->session()->get('selected_plans');
         return view('plans.choose')->with(['choices'=>$choice]);
     }
+    public function show(Plan $plan)
+    {
+        dd($plan);
+        return view('reservations.confirm')->with(['plan'=>$plan]);
+    }
+    
+    
 }
