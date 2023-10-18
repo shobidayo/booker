@@ -32,7 +32,6 @@ class PlanController extends Controller
     }
     public function show(Plan $plan)
     {
-        dd($plan);
         return view('reservations.confirm')->with(['plan'=>$plan]);
     }
     
