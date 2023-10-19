@@ -1,0 +1,86 @@
+.header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width:100%;
+    background-color:#92E382;
+    font-size:20px;
+    text-align: center;
+    height: 100px;
+    z-index: 1;
+}
+.main{
+    margin-top: 100px;
+    padding: 20px;
+    font-size:25px;
+}
+.title-box {
+    position: relative;
+    margin: 20px 1000px 45px 60px;
+    padding: 5px 10px;
+    border: solid 3px #62c1ce;
+}
+.title-box .title {
+    position: absolute;
+    display: inline-block;
+    top: -27px;
+    left: -3px;
+    padding: 0 9px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 17px;
+    background: #FFE0E0;
+    color:black;
+    font-weight: bold;
+    border-radius: 5px 5px 0 0;
+}
+.title-box p {
+    margin: 0; 
+    padding: 0;
+}
+
+table {
+    margin: auto;
+    border: 2px solid #000;
+}
+.default{
+    font-size: 30px;
+    background-color:#FFE0E0;
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 30%
+}
+.form input{
+    padding:15px 7px;
+    width: 97%;
+}
+
+button[type="submit"] {
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px 30px;
+    display:block;
+    margin: auto;
+    margin-top: 20px;
+    background-color: #3319F5;
+    color: white;
+}
+
+.footer{
+    text-align: center;
+    margin-top: 25px;
+}
+a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+    transition: background-color 0.3s, color 0.3s; /* ホバー時のトランジションを設定 */
+}
+
+a:hover {
+    background-color: black;
+    color: white;
+}
