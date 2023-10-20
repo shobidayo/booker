@@ -12,14 +12,18 @@ class ReservationController extends Controller
     return view('reservations.select');
     }
     
-    public function search(Request $request,Reservation $reservation)
+    public function store(Request $request,Reservation $reservation)
     {
-        $selectedPeople = $request->input('reserver_people');
-        dd($selectedPeople);
+        $input=$request['users'];
         
-        // $plans =Plan::where('capacity',$selectedPeople)->get();
+        //ここで、$reservationテーブルには入力されたカラムがないので、usersテーブルとリレーションを結んで、usersテーブルに保存する処理を作成する
         
-    // return view('reservations.select');
+        // $inputinformation = $reservation->whereHas('user', function($q) use($input){
+        // $q->where('user_id','=',$input);
+        // })->get();
+        // dd($inputinformation);
+        
+        $reservation->fill($input)->save();
+    return redirect('/');
     }
-    
-}
+}    
