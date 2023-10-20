@@ -55,7 +55,7 @@ table {
     width: 97%;
 }
 
-button[type="submit"] {
+input[type="submit"] {
     font-size: 16px;
     border-radius: 8px;
     padding: 8px 30px;

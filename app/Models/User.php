@@ -17,9 +17,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    public function reservations(){
+    return $this->hasMany(Reservation::class);
+    }
+     
     protected $fillable = [
         'name',
+        'address',
         'email',
+        'tell_number',
         'password',
     ];
 

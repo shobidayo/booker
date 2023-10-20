@@ -48,7 +48,7 @@
                             <label for="name">名前（カタカナ）：</label>
                         </td>
                         <td class ="form">
-                            <input type="text" name="name" placeholder="タナカ　タロウ" required>
+                            <input type="text" name="users[name]" placeholder="タナカ　タロウ" required>
                         </td>
                     </tr>
                     <tr>
@@ -56,7 +56,7 @@
                             <label for="address">住所：</label>
                         </td>
                         <td class ="form">
-                            <input type="text" name="address" placeholder="東京都〇〇" required>
+                            <input type="text" name="users[address]" placeholder="東京都〇〇" required>
                         </td>
                     </tr>
                     <tr>
@@ -64,7 +64,7 @@
                             <label for="tellphone">電話番号：</label>
                         </td>
                         <td class ="form">
-                            <input type="tel" name="phone" placeholder="00011114444" required>
+                            <input type="tel" name="users[tell_number]" placeholder="00011114444" required>
                         </td>
                     </tr>
                     <tr>
@@ -72,11 +72,11 @@
                             <label for="email">メールアドレス：</label>
                         </td>
                         <td class ="form">
-                            <input type="email" name="email" placeholder="sadou@gmail.com" required>
+                            <input type="email" name="users[email]" placeholder="sadou@gmail.com" required>
                         </td>
                     </tr>
                 </table>
-                <button type="submit">予約確定</button>
+                <input type="submit" value="予約確定" />
             </form>
         </div>
         
