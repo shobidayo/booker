@@ -22,18 +22,21 @@ class PlanController extends Controller
           ->where('checkout_date','<=',$checkoutDate)
           ->orwhereNull('checkout_date');
         })->get();
-        // dd($selected_plans);
+        
+        // $request->session()->put('selected_plans', $selected_plans);
         return redirect('/plans')->with(['selected_plans' => $selected_plans]);
     }
     public function choices(Request $request)
     {
-        $choice = $request->session()->get('selected_plans');
+        // $choice = $request->session()->get('selected_plans');
+        // $request->session()->forget('selected_plans');
+        dd($request->session()->all());
         return view('plans.choose')->with(['choices'=>$choice]);
     }
-    public function show(Plan $plan)
+    public function show(Request $request, Plan $plan)
     {
-        return view('reservations.confirm')->with(['plan'=>$plan]);
+        $selected_plans = $request->session()->get('selected_plans');
+        return view('reservations.confirm', ['plan' => $plan, 'selected_plans' => $selected_plans]);
     }
-    
     
 }
