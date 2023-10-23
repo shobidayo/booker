@@ -19,26 +19,37 @@
             <div class ="title-box capacity">
                 <span class ="title">ご宿泊人数</span>
                 <p>{{ $inputPeople }}</p>
+                <input type="hidden" name="inputPeople" value="{{ $inputPeople }}">
             </div>
             <div class ="title-box room">
                 <span class ="title">お部屋タイプ</span>
                 <p>{{ $inputRoom }}</p>
+                <input type="hidden" name="inputRoom" value="{{ $inputRoom }}">
             </div>
             <div class ="title-box date">
                 <span class="title">チェックイン日</span>
                 <p>{{ $inputCheckin }}</p>
+                <input type="hidden" name="inputCheckin" value="{{ $inputCheckin }}">
             </div>
             <div class ="title-box date">
                 <span class="title">チェックアウト日</span>
                 <p>{{ $inputCheckout }}</p>
+                <input type="hidden" name="inputCheckout" value="{{ $inputCheckout }}">
             </div>
             <div class ="title-box plan">
                 <span class="title">選択したプラン</span>
                 <p>{{$plan->name}}</p>
+                <input type="hidden" name="inputName" value="{{ $plan->name }}">
             </div>
             <div class ="title-box price">
                 <span class="title">料金</span>
                 <p>{{$price}}</p>
+                <input type="hidden" name="inputPrice" value="{{ $price }}">
+            </div>
+            <div class ="title-box body">
+                <span class="title">選択したプラン内容</span>
+                <p>{{$plan->body}}</p>
+                <input type="hidden" name="inputbody" value="{{ $plan->body }}">
             </div>
         </div>
         <input type="submit" value="予約確定" />
