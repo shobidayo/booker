@@ -9,14 +9,6 @@ class Reservation extends Model
 {
     use HasFactory;
     
-    protected $fillable = [
-        'user_id',
-        'name',
-        'address',
-        'email',
-        'tell_number',
-    ];
-    
     public function plans(){
     return $this->belongsToMany(Plan::class);
     }
