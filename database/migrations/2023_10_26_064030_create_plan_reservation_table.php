@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('reservation_plan', function (Blueprint $table) {
+        Schema::create('plan_reservation', function (Blueprint $table) {
              $table->foreignId('reservation_id')->constrained();
              $table->foreignId('plan_id')->constrained();
+             $table->primary(['plan_id', 'reservation_id']);
              $table->timestamps();
              $table->softDeletes();
         });
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('reservation_plan');
+        Schema::dropIfExists('plan_reservation');
     }
 };

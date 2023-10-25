@@ -24,7 +24,7 @@
             <div class ="title-box room">
                 <span class ="title">お部屋タイプ</span>
                 <p>{{ $inputRoom }}</p>
-                <input type="hidden" name="inputRoom" value="{{ $inputRoom }}">
+                <input type="hidden" name="inputRoom" value="{{ $room_id }}">
             </div>
             <div class ="title-box date">
                 <span class="title">チェックイン日</span>
@@ -39,20 +39,20 @@
             <div class ="title-box plan">
                 <span class="title">選択したプラン</span>
                 <p>{{$plan->name}}</p>
-                <input type="hidden" name="inputName" value="{{ $plan->name }}">
+                <input type="hidden" name="inputPlanTitle" value="{{ $plan->id }}">
             </div>
             <div class ="title-box price">
                 <span class="title">料金</span>
                 <p>{{$price}}</p>
-                <input type="hidden" name="inputPrice" value="{{ $price }}">
             </div>
             <div class ="title-box body">
                 <span class="title">選択したプラン内容</span>
                 <p>{{$plan->body}}</p>
-                <input type="hidden" name="inputbody" value="{{ $plan->body }}">
             </div>
         </div>
         <input type="submit" value="予約確定" />
+        
+        
     </form>
         <!--<div class ="input">-->
         <!--    <form method="POST" action="/confirm_reservation">-->
@@ -96,7 +96,7 @@
         <!--</div>-->
         
         <div class ="footer">
-            <a href="/">戻る</a>
+            <a href="/reservations">戻る</a>
         </div>
     </body>
 </html>

@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UsersSeeder::class);
         $this->call(ReservationsSeeder::class);
         $this->call(PlanRoomSeeder::class);
-        $this->call(ReservationPlanSeeder::class);
         $this->call(ReservationRoomSeeder::class);
+        $this->call(PlanReservationSeeder::class);
         // \App\Models\User::factory()->create([
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
