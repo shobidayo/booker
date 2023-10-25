@@ -17,23 +17,25 @@ class ReservationController extends Controller
         $inputRoom = $request->input('inputRoom');
         $inputCheckin = $request->input('inputCheckin');
         $inputCheckout = $request->input('inputCheckout');
-        $inputName = $request->input('inputName');
-        $inputPrice = $request->input('inputPrice');
-        $inputbody = $request->input('inputbody');
+        $inputPlan = $request->input('inputPlanTitle');
         
+        // reservationに対する保存処理
+        $reservation->checkin_date = $inputCheckin;
+        $reservation->checkout_date = $inputCheckout;
+        $reservation->reserver_people = $inputPeople;
+        $reservation->user_id = 1;
+        $reservation->save();
         
-        $reservation->fill($inputPeople)->save();
+        // roomとの中間テーブルに対する保存処理.
+        // Todo:attachにはリレーション先のidを入れる
+        $reservation->rooms()->attach($inputRoom);
         
-        // $create_reservation =$reservation->whereHas('rooms.plans', function($q) use($inputPeople,$inputRoom,$inputCheckin,$inputCheckout
-        // ,$inputName,$inputPrice){
-        // $q->where('capacity','=', $inputPeople)
-        //   ->where('type','=',$inputRoom)
-        //   ->where('checkin_date','=',$inputCheckin)
-        //   ->where('checkout_date','=',$inputCheckout)
-        //   ->where('name','=',$inputName)
-        //   ->where('price','=',$inputPrice)
-        //   ->orwhere('price1','=',$inputPrice);
-        // })->save();
+        // planとの中間テーブルに対する保存処理
+        $reservation->plans()->attach($inputPlan);
+        
+        // $bookingNumber=Str::random(6);
+        //予約番号をランダムな文字列で取得。Complite.blade.phpで｛｛$bookingNumber｝｝を書いて表示させる？
+    
         
     return redirect('/complete/reservation');
     }

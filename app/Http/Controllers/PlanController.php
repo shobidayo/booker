@@ -58,8 +58,10 @@ class PlanController extends Controller
         $inputRoom = $request->session()->get('input-room-select');
          if ($inputRoom === 'シングルルーム') {
             $price = $plan->price;
+            $room_id = 1;
         } elseif ($inputRoom === 'ツインルーム') {
             $price = $plan->price1;
+            $room_id = 2;
         }
     
         $inputCheckin = $request->session()->get('input-checkin-Date');
@@ -67,6 +69,7 @@ class PlanController extends Controller
         
         return view('reservations.confirm')->with([
         'plan' => $plan,
+        'room_id'=>$room_id,
         'price' => $price,
         'selected_plans' => $selected_plans,
         'inputPeople' => $inputPeople,
