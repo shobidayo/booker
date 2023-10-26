@@ -34,12 +34,16 @@ class ReservationController extends Controller
         $reservation->plans()->attach($inputPlan);
         
         // $bookingNumber=Str::random(6);
+        // dd($bookingNumber);
         //予約番号をランダムな文字列で取得。Complite.blade.phpで｛｛$bookingNumber｝｝を書いて表示させる？
-    
         
     return redirect('/complete/reservation');
     }
     public function complete(){
         return view('reservations.complete');
+    }
+    
+    public function check(){
+        return view('reservations.checkORdelete');
     }
 }    
