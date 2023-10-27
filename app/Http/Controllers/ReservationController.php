@@ -45,7 +45,6 @@ class ReservationController extends Controller
     
     public function check(Reservation $reservation){
         
-        
         return view('reservations.check')->with([
         'reservations' => $reservation->getPaginateBylimit(5)    
         ]);
