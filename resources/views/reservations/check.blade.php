@@ -10,48 +10,49 @@
         <link href="{{ secure_asset('css/confirms.css') }}" rel="stylesheet">
     </head>
     <body>
-    <form action="/posts/{{ $reservation->id }}" id="form_{{ $reservation->id }}" method="post">
-        @csrf
         <div class ="header">
             <h1>予約情報確認画面</h1>
         </div>
         <div class ="main">
+            @foreach ($reservations as $reservation)
             <div class ="title-box capacity">
                 <span class ="title">ご宿泊人数</span>
-                <p>{{ $inputPeople }}</p>
-                <input type="hidden" name="inputPeople" value="{{ $inputPeople }}">
+                <p>{{$reservation->reserver_people}}</p>
+                <input type="hidden" name="inputPeople">
             </div>
             <div class ="title-box room">
                 <span class ="title">お部屋タイプ</span>
-                <p>{{ $inputRoom }}</p>
-                <input type="hidden" name="inputRoom" value="{{ $room_id }}">
+                <p>お部屋タイプ</p>
+                <input type="hidden" name="inputRoom">
             </div>
             <div class ="title-box date">
                 <span class="title">チェックイン日</span>
-                <p>{{ $inputCheckin }}</p>
-                <input type="hidden" name="inputCheckin" value="{{ $inputCheckin }}">
+                <p>{{$reservation->checkin_date}}</p>
+                <input type="hidden" name="inputCheckin">
             </div>
             <div class ="title-box date">
                 <span class="title">チェックアウト日</span>
-                <p>{{ $inputCheckout }}</p>
-                <input type="hidden" name="inputCheckout" value="{{ $inputCheckout }}">
+                <p>{{$reservation->checkout_date}}</p>
+                <input type="hidden" name="inputCheckout">
             </div>
             <div class ="title-box plan">
                 <span class="title">選択したプラン</span>
-                <p>{{$plan->name}}</p>
-                <input type="hidden" name="inputPlanTitle" value="{{ $plan->id }}">
+                <p>選択したプラン</p>
+                <input type="hidden" name="inputPlanTitle">
             </div>
             <div class ="title-box price">
                 <span class="title">料金</span>
-                <p>{{$price}}</p>
+                <p>料金</p>
             </div>
             <div class ="title-box body">
                 <span class="title">選択したプラン内容</span>
-                <p>{{$plan->body}}</p>
+                <p>選択したプラン内容</p>
             </div>
         </div>
         <input type="submit" value="予約確定" />
-    </form>
+        @endforeach
+        <div class='paginate'>
+            {{ $reservations->links() }}
 <div class ="footer">
             <a href="/">戻る</a>
         </div>

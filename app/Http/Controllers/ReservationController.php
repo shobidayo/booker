@@ -43,7 +43,11 @@ class ReservationController extends Controller
         return view('reservations.complete');
     }
     
-    public function check(){
-        return view('reservations.checkORdelete');
+    public function check(Reservation $reservation){
+        
+        
+        return view('reservations.check')->with([
+        'reservations' => $reservation->getPaginateBylimit(5)    
+        ]);
     }
 }    
