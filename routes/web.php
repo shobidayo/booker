@@ -22,3 +22,5 @@ Route::get('/plans',[PlanController::class,'choices']);
 Route::get('/plans/{plan}/reservation',[PlanController::class,'show']);
 Route::post('/confirm_reservation',[ReservationController::class,'store']);
 Route::get('/complete/reservation',[ReservationController::class,'complete']);
+
+Route::get('/reservation_check',[ReservationController::class,'check']);
