@@ -7,14 +7,14 @@
 
         <!-- Fonts -->
     
-        <link href="{{ secure_asset('css/confirms.css') }}" rel="stylesheet">
+        <link href="{{ secure_asset('css/check.css') }}" rel="stylesheet">
     </head>
     <body>
-        <div class ="header">
-            <h1>予約情報一覧確認画面</h1>
-        </div>
-        <div class ="main">
-    @foreach ($reservations as $reservation)        
+    <div class ="header">
+        <h1>予約情報一覧確認画面</h1>
+    </div>
+    <div class ="main">
+        @foreach ($reservations as $reservation)        
             <div class ="title-box capacity">
                 <span class ="title">ご宿泊人数</span>
                 <p>{{$reservation->reserver_people}}</p>
@@ -56,15 +56,19 @@
                 <p>{{$plan->name}}</p>
             </div>
             @endforeach
-        </div>
-    <form action="/reservation_check/{{ $reservation->id }}" id="form_{{ $reservation->id }}" method="post">
-            @csrf
-            @method('DELETE')  
-            <button type="button" onclick="deleteReservation({{ $reservation->id }})">予約キャンセル</button> 
-    </form>
-    @endforeach
-     <div class='paginate'>
+    </div>
+    
+        <form action="/reservation_check/{{ $reservation->id }}" id="form_{{ $reservation->id }}" method="post">
+                @csrf
+                @method('DELETE')  
+                <button type="button" onclick="deleteReservation({{ $reservation->id }})">予約キャンセル</button> 
+        </form>
+        @endforeach
+    
+    <div class='paginate'>
             {{ $reservations->links() }}
+    </div>        
+    
     <div class ="footer">
         <a href="/">戻る</a>
     </div>
