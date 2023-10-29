@@ -15,10 +15,6 @@
         </div>
         <div class ="main">
     @foreach ($reservations as $reservation)        
-    <form action="/reservation_check/{{ $reservation->id }}" id="form_{{ $reservation->id }}" method="post">
-        @csrf
-        @method('DELETE')        
-            
             <div class ="title-box capacity">
                 <span class ="title">ご宿泊人数</span>
                 <p>{{$reservation->reserver_people}}</p>
@@ -60,14 +56,26 @@
                 <p>{{$plan->name}}</p>
             </div>
             @endforeach
-            <a herf ="/reservation_check/{{$reservation->id}}">予約キャンセル</a>
         </div>
-        @endforeach
-    </form>    
-        <div class='paginate'>
+    <form action="/reservation_check/{{ $reservation->id }}" id="form_{{ $reservation->id }}" method="post">
+            @csrf
+            @method('DELETE')  
+            <button type="button" onclick="deleteReservation({{ $reservation->id }})">予約キャンセル</button> 
+    </form>
+    @endforeach
+     <div class='paginate'>
             {{ $reservations->links() }}
-<div class ="footer">
-            <a href="/">戻る</a>
-        </div>
+    <div class ="footer">
+        <a href="/">戻る</a>
+    </div>
+    <script>
+            function deleteReservation(id) {
+                'use strict'
+        
+                if (confirm('予約をキャンセルすると復元できません。\n本当に予約をキャンセルしますか？')) {
+                    document.getElementById(`form_${id}`).submit();
+                }
+            }
+        </script>
     </body>
 </html>    

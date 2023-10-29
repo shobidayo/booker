@@ -39,25 +39,20 @@ class ReservationController extends Controller
         
     return redirect('/complete/reservation');
     }
-    public function complete(){
+    public function complete()
+    {
         return view('reservations.complete');
     }
     
-    public function check(Reservation $reservation){
-        
-        // $check_reservation = $reservation->whereHas('rooms.plans', function($q) use($reservation){
-        // $q->where('type')
-        //   ->where('name')
-        //   ->where('body')
-        //   ->where('price')
-        //   ->where('price1');
-        // })->get();
+    public function check(Reservation $reservation)
+    {
         return view('reservations.check')->with([
         'reservations' => $reservation->getPaginateBylimit(5)    
         ]);
     }
-    public function confirm(Reservation $reservation){
-        
-        return view('reservation.delete')->with(['reservations' => $reservation]);
+    public function delete(Reservation $reservation)
+    {
+        $reservation->delete();
+        return redirect('/reservation_check');
     }
 }    
