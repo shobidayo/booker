@@ -53,6 +53,6 @@ class ReservationController extends Controller
     public function delete(Reservation $reservation)
     {
         $reservation->delete();
-        return redirect('/reservation_check');
+        return redirect('/');
     }
 }    
