@@ -7,8 +7,8 @@
 
         <!-- Fonts -->
     
-        <link href="{{ secure_asset('css/plans.css') }}" rel="stylesheet">
-        <script src ="{{ secure_asset('JavaScript/plans.js') }}"></script>
+        <link href="{{ asset('css/plans.css') }}" rel="stylesheet">
+        <script src ="{{ asset('JavaScript/plans.js') }}"></script>
     </head>
 <body>    
     <div class ="header">

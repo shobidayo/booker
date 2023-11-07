@@ -7,7 +7,7 @@
 
         <!-- Fonts -->
     
-        <link href="{{ secure_asset('css/confirms.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/confirms.css') }}" rel="stylesheet">
     </head>
     <body>
     <form method="POST" action="/confirm_reservation">
