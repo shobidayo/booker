@@ -179,6 +179,12 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name' => '名前（カタカナ）',
+        'address' => '住所',
+        'tell_number' =>'電話番号',
+        'email'=> 'メールアドレス',
+        'password'=>'パスワード'
+        ],
 
 ];

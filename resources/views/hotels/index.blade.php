@@ -22,8 +22,29 @@
                 <li>{{ $hotel->event }}</li>
                 <li>{{ $hotel->information }}</li>
                 <li>{{ $hotel->FAQ }}</li>
-                <li class = "reservations"><a href = "/reservations">ご宿泊予約</a></li>
-                <li class = "reservation-check"><a href = "/reservation_check">ご予約確認</a></li>
+                    @auth
+                        <li class = "reservations"><a href = "/reservations">ご宿泊予約</a></li>
+                        <li class = "reservation-check"><a href = "/reservation_check">ご予約確認</a></li>
+                        <p class ="login">ログイン:{{ Auth::user()->name }}</p>
+                    <div class="button-container">
+                        <button class="mypage">
+                          <a href="{{ route('profile.edit') }}">プロフィール</a>
+                        </button>
+                    <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                        <button class="logout">
+                        ログアウト
+                        </button>
+                    </form>
+                    </div>
+                    @else
+                        <button class="register_button">
+                             <a href="{{ route('register') }}">新規登録</a>
+                        </button>
+                        <button class="login_button">
+                             <a href="{{ route('login') }}">ログイン</a>
+                        </button>
+                    @endauth
             </ul>
         </div>
      </div>
