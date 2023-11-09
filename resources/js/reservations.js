@@ -1,3 +1,7 @@
+import.meta.glob([
+    '../images/**',
+]);
+
 document.addEventListener("DOMContentLoaded", function () {
     var checkinInput = document.getElementById("checkin");
     var checkoutInput = document.getElementById("checkout");

@@ -6,8 +6,7 @@
         <title>予約検索</title>
 
         <!-- Fonts -->
-    
-        <link href="{{ asset('css/reservations.css') }}" rel="stylesheet">
+    @vite(['resources/css/reservations.css', 'resources/js/reservations.js'])
     </head>
     <body> 
     <div class = "header">
@@ -41,6 +40,5 @@
     </form>
      
     <a href ="/">戻る</a>
-    <script src="{{ asset('JavaScript/reservations.js') }}"></script>
     </body>
 </html>
