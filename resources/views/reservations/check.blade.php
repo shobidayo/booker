@@ -6,8 +6,7 @@
         <title>予約情報一覧確認画面</title>
 
         <!-- Fonts -->
-    
-        <link href="{{ asset('css/check.css') }}" rel="stylesheet">
+    @vite(['resources/css/check.css'])
     </head>
     <body>
     <div class ="header">

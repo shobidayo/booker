@@ -6,9 +6,7 @@
         <title>プラン選択</title>
 
         <!-- Fonts -->
-    
-        <link href="{{ asset('css/plans.css') }}" rel="stylesheet">
-        <script src ="{{ asset('JavaScript/plans.js') }}"></script>
+    @vite(['resources/css/plans.css'])
     </head>
 <body>    
     <div class ="header">

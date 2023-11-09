@@ -6,8 +6,7 @@
         <title>予約情報入力</title>
 
         <!-- Fonts -->
-    
-        <link href="{{ asset('css/confirms.css') }}" rel="stylesheet">
+        @vite(['resources/css/confirms.css'])
     </head>
     <body>
     <form method="POST" action="/confirm_reservation">
@@ -50,6 +49,7 @@
                 <p>{{$plan->body}}</p>
             </div>
         </div>
+        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
         <input type="submit" value="予約確定" />
         
         

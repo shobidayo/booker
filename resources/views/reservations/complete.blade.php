@@ -6,8 +6,7 @@
         <title>予約情報入力</title>
 
         <!-- Fonts -->
-    
-        <link href="{{ asset('css/complete.css') }}" rel="stylesheet">
+    @vite(['resources/css/complete.css'])
     </head>
     <body>
         <div class ="header">

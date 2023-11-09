@@ -57,7 +57,7 @@ a{
 
 .conteiner {
     padding: 180px 0 100px 0;
-    background-image: url('/background/picture1.jpg'); 
+    background-image: url('/resources/images/picture1.jpg'); 
     background-size:cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
