@@ -7,7 +7,7 @@
 
         <!-- Fonts -->
     
-        <link href="{{ secure_asset('css/hotels.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/hotels.css') }}" rel="stylesheet">
     </head>
     <body>    
      <div class = "header">
@@ -52,7 +52,7 @@
     <div class = "conteiner">
         <h1>茶道旅館</h1>
         <p>泊まれて日本の文化を味わえる</p>
-        <img src= "{{ secure_asset('images/picture4.jpg') }}" alt="風景">
+        <img src= "{{ asset('images/picture4.jpg') }}" alt="風景">
     <div class ="main">    
         <h2>茶道旅館について</h2>
         <p>
@@ -64,8 +64,8 @@
         <ul>
             <li>お問い合わせ</li>
             <li>会社名○○</li>
-            <li>メールアドレス〇〇</li>
-            <li>電話番号〇〇</li>
+            <li>メールアドレス○○</li>
+            <li>電話番号○○</li>
         </ul>
     </h3>   
     </div>

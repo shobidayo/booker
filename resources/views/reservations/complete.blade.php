@@ -7,7 +7,7 @@
 
         <!-- Fonts -->
     
-        <link href="{{ secure_asset('css/complete.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/complete.css') }}" rel="stylesheet">
     </head>
     <body>
         <div class ="header">
