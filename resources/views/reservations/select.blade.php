@@ -9,7 +9,7 @@
     
         <link href="{{ asset('css/reservations.css') }}" rel="stylesheet">
     </head>
-    <body>    
+    <body> 
     <div class = "header">
         <h1>予約検索</h1>
     </div>
@@ -35,7 +35,7 @@
     
             <label for="checkout">チェックアウト日</label>
             <input type="date" id="checkout" name="checkout_date"><br>
-    
+            
             <input type="submit" value="検索する">
         </div>
     </form>

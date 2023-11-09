@@ -18,12 +18,13 @@ class ReservationController extends Controller
         $inputCheckin = $request->input('inputCheckin');
         $inputCheckout = $request->input('inputCheckout');
         $inputPlan = $request->input('inputPlanTitle');
+        $user_id =$request->input('user_id');
         
         // reservationに対する保存処理
         $reservation->checkin_date = $inputCheckin;
         $reservation->checkout_date = $inputCheckout;
         $reservation->reserver_people = $inputPeople;
-        $reservation->user_id = 1;
+        $reservation->user_id = $user_id;
         $reservation->save();
         
         // roomとの中間テーブルに対する保存処理.

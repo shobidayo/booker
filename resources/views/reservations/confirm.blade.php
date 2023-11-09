@@ -50,6 +50,7 @@
                 <p>{{$plan->body}}</p>
             </div>
         </div>
+        <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
         <input type="submit" value="予約確定" />
         
         
