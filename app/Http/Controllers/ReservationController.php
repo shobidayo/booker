@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Reservation;
+use Illuminate\Support\Facades\Auth;
 
 class ReservationController extends Controller
 {
@@ -34,12 +35,9 @@ class ReservationController extends Controller
         // planとの中間テーブルに対する保存処理
         $reservation->plans()->attach($inputPlan);
         
-        // $bookingNumber=Str::random(6);
-        // dd($bookingNumber);
-        //予約番号をランダムな文字列で取得。Complite.blade.phpで｛｛$bookingNumber｝｝を書いて表示させる？
-        
     return redirect('/complete/reservation');
     }
+    
     public function complete()
     {
         return view('reservations.complete');
@@ -47,9 +45,13 @@ class ReservationController extends Controller
     
     public function check(Reservation $reservation)
     {
-        return view('reservations.check')->with([
-        'reservations' => $reservation->getPaginateBylimit(5)    
-        ]);
+        $user = Auth::user();
+        $user_id = $user->id;
+        
+        
+        $reservations = $reservation->where('user_id',$user_id)->orderBy('updated_at', 'DESC')->paginate(3);
+        
+        return view('reservations.check')->with(['reservations' => $reservations]);
     }
     public function delete(Reservation $reservation)
     {
