@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
 
-        <title>予約情報入力</title>
+        <title>予約情報確認</title>
 
         <!-- Fonts -->
         @vite(['resources/css/confirms.css'])
@@ -12,7 +12,7 @@
     <form method="POST" action="/confirm_reservation">
         @csrf
         <div class ="header">
-            <h1>予約情報入力画面</h1>
+            <h1>予約情報確認画面</h1>
         </div>
         <div class ="main">
             <div class ="title-box capacity">
