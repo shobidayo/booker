@@ -1,5 +1,6 @@
-## Enhance Your Travel Experience with Seamless Reservations
-You colud book for confortable, Wishing you a wonderfor journey.
+## 快適な予約で旅行を楽しむ
+快適な予約で素敵な旅行になりますように
+
 ![25D7CD9F-3A13-42DB-A65A-A6E7F828B785](https://github.com/shobidayo/new_repository/assets/142150831/624a1278-979e-4cd1-b73e-ca76085cfb16)
 
 
@@ -37,7 +38,7 @@ https://confort-booking.com/
 |プラン選択画面|予約情報確認画面|
 | --- | --- |
 |![スクリーンショット 2023-11-14 111523](https://github.com/shobidayo/new_repository/assets/142150831/a5351aca-8a01-4881-b44d-0eee9287daab)|![スクリーンショット 2023-11-14 111600](https://github.com/shobidayo/new_repository/assets/142150831/b58be372-d062-48a8-bb0b-ff765870f112)|
-|予約プランが沢山だと選ぶのが困難になるため、プランを一覧で表示し、確認することを可能にした。<br>また、選択したいプランを一目で把握できるように工夫した。|入力した情報が正しいか再確認できるようにフォーム情報をセッションで保持し、予約確認画面できるように実装しました。|　　
+|予約プランが沢山だと選ぶのが困難になるため、プランを一覧で表示し、確認することを可能にしました。<br>また、選択したいプランを一目で把握できるように工夫しました。|入力した情報が正しいか再確認できるようにフォーム情報をセッションで保持し、予約確認画面できるように実装しました。|　　
 
 |予約確定画面|予約情報確認画面|
 | --- | --- |
